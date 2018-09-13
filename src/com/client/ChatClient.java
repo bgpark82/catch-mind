@@ -42,6 +42,8 @@ import com.drawing.SwingPaint;
 
 public class ChatClient extends Frame implements ActionListener, MouseMotionListener, MouseListener {
 
+	//Check Comment
+	
 	Socket clientSocket;
 	PrintWriter out;
 	BufferedReader in;
