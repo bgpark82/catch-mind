@@ -55,12 +55,6 @@ public class ChatClient extends Frame implements ActionListener, MouseMotionList
 	JButton login_Btn, out_Btn, whisper_Btn, emoticon_Btn;
 	JPanel South_Panel, East_Panel, Northeast_Panel, panel04;
 	Label id_Label, ip_Label;
-
-	/*
-	Vector vector;
-	JList list;
-	JPanel panel;
-	*/
 	
 	// drawing panel variables
 	int oldX, oldY, currentX, currentY;
@@ -75,7 +69,6 @@ public class ChatClient extends Frame implements ActionListener, MouseMotionList
 
 	public static void main(String[] args) {
 		ChatClient client = new ChatClient();
-//		client.isAuth(false);
 		client.Connection();
 		
 	}
@@ -412,24 +405,6 @@ public class ChatClient extends Frame implements ActionListener, MouseMotionList
 			}
 		}
 
-//		vector = new Vector();
-//		list = new JList().setCellRenderer(new CustomCellRenderer());;
-//		panel = new JPanel();
-//		
-//		ImageIcon goldMedal = new ImageIcon(this.getClass().getResource("/images/gold.jpg"));
-//		Image gold = goldMedal.getImage().getScaledInstance(20, 20, java.awt.Image.SCALE_SMOOTH);
-//		goldMedal = new ImageIcon(gold);
-//		ImageIcon silverMedal = new ImageIcon(this.getClass().getResource("/images/silver.jpg"));
-//		Image silver = silverMedal.getImage().getScaledInstance(20, 20, java.awt.Image.SCALE_SMOOTH);
-//		silverMedal = new ImageIcon(silver);
-//		ImageIcon bronzeMedal = new ImageIcon(this.getClass().getResource("/images/bronze.jpg"));
-//		Image bronze = bronzeMedal.getImage().getScaledInstance(20, 20, java.awt.Image.SCALE_SMOOTH);
-//		bronzeMedal = new ImageIcon(bronze);
-//		
-//		panel.add(new JLabel(goldMedal));
-//		vector.addElement(panel);
-//		list.setListData(vector);
-
 		swing = new SwingPaint();
 		outputArea = new TextArea();
 		outputArea.setEditable(false);
@@ -479,14 +454,10 @@ public class ChatClient extends Frame implements ActionListener, MouseMotionList
 		c.gridy = GridBagConstraints.RELATIVE;
         c.fill = GridBagConstraints.HORIZONTAL;
 
-//		c.fill = GridBagConstraints.NONE;
 		out.setLayout(g);
 		out.add(out_Btn, c);
 		out.add(emoticon_Btn,c);
 		out.add(whisper_Btn,c);
-		
-		
-		// -------------------
 
 		South_Panel.add(id_Label);
 		South_Panel.add(id_tf);
