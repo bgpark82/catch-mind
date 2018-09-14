@@ -8,7 +8,6 @@ import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.Image;
 import java.awt.Label;
 import java.awt.List;
 import java.awt.Panel;
@@ -27,17 +26,16 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.StringTokenizer;
-import java.util.Vector;
 
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.ListCellRenderer;
 import javax.swing.border.EmptyBorder;
 
+import com.db.ClientBiz;
+import com.db.ClientBizImpl;
 import com.drawing.SwingPaint;
 
 public class ChatClient extends Frame implements ActionListener, MouseMotionListener, MouseListener {
@@ -68,6 +66,8 @@ public class ChatClient extends Frame implements ActionListener, MouseMotionList
 	Color Mixed_Color;
 	int thick, thick_screen;
 	boolean flag = true;
+	
+	ClientBiz biz;
 
 	public static void main(String[] args) {
 		ChatClient client = new ChatClient();
@@ -134,6 +134,10 @@ public class ChatClient extends Frame implements ActionListener, MouseMotionList
 				login_Btn.setEnabled(false);
 				id_Label.setEnabled(false);
 				inputField.setEnabled(true);
+				biz = new ClientBizImpl();
+				
+				
+				
 			}
 		}
 
